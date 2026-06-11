@@ -1,24 +1,24 @@
 # Yarden's Triple-Track Progress Log
 
-*Living document. Regenerated in full at the end of every session under the orchestrator-role.md regeneration contract. Last updated: **2026-06-10**.*
+*Living document. Regenerated in full at the end of every session under the orchestrator-role.md regeneration contract. Last updated: **2026-06-11**.*
 
 ---
 
 ## Current Position
 
 ### Track A: Learning (Syllabus)
-- **Anchor:** `syllabus_v2_3.md` v2.3 (ratified 2026-06-10).
+- **Anchor:** `syllabus_v2_3.md` v2.3.
 - **Phase:** I (Mathematical Foundations). **Month:** 0 (Linear Algebra + SVD/PCA recognition). **Week:** 1 (launched 2026-06-09).
-- **L1 — DONE.** Strang Lectures 1–5 + Ch. 1–2 reported complete; Gaussian-elimination solver deliverable assumed shipped per session contract (no checkpoint crossed, no flag raised).
-- **Active L block: L2** — Strang Lectures 6–10 + Ch. 3, [AUTH], four fundamental subspaces. Deliverable: hand-authored `four_subspaces(A)` (bases for all four subspaces, rank–nullity self-check, full-rank + rank-deficient test cases). Issued 2026-06-10.
-- **Next after L2: L3** — orthogonality → projections → least squares → Gram–Schmidt (OCW L14–17; verify lecture numbers against the live OCW index at briefing, per C5-min; L11–13 folded/skimmed as needed). Lands the OLS normal-equation coding deliverable. Then eigenvalues/eigenvectors L21–22 [AUTH]; determinants L18–20 skim [REC]; SVD/PCA + condition number [REC] close Month 0.
-- **Pace:** ~6.5 months accepted; Month 0 = 5–6 weeks on-plan. C4 interview-readiness blocks (~24–28h) ride as parallel filler Months 1–4.
-- **Next pending checkpoint:** Month-0 **mid-month gate**, ~2.5–3 weeks from launch (≈ end of June) — coding deliverable(s) runnable + NotebookLM consolidation verdict. The L block closing the gate gets the checkpoint flag.
+- **L1 — DONE.** Strang Lectures 1–5 + Ch. 1–2; Gaussian-elimination solver shipped per session contract.
+- **L2 — ACTIVE / in flight.** Strang Lectures 6–10 + Ch. 3, [AUTH], four fundamental subspaces. Deliverable: hand-authored `four_subspaces(A)` (bases for all four subspaces, rank–nullity self-check, full-rank + rank-deficient test cases). Issued 2026-06-10; its precondition (NotebookLM source swap) **confirmed done 2026-06-11**; Yarden started L2.
+- **Next: L3 ∥ Month-0 spike, after L2** (Yarden's stated plan, 2026-06-11). **L3** — orthogonality → projections → least squares → Gram–Schmidt (OCW L14–17; **verify lecture numbers vs. the live OCW index at briefing**, per C5-min; L11–13 folded/skimmed as needed). Lands the OLS normal-equation coding deliverable. Then eigenvalues/eigenvectors L21–22 [AUTH]; determinants L18–20 skim [REC]; SVD/PCA + condition number [REC] close Month 0.
+- **Pace:** ~6.5 months; Month 0 = 5–6 weeks on-plan. C4 interview-readiness blocks (~24–28h) ride as parallel filler Months 1–4.
+- **Next pending checkpoint:** Month-0 **mid-month gate**, ~end of June — coding deliverable(s) runnable + NotebookLM consolidation verdict. The L block closing the gate gets the checkpoint flag.
 
 ### Track B: Capstone Build
-- **Anchor:** `capstone_V5_5.md` v5.5 (ratified 2026-06-10). **Milestone: M0** (plan approved).
-- **Next B block: Month-0 data-layer de-risking spike** (B-Claude, **6–8h hard cap — not an early M1**). Confirms: (a) `da_tempset` archive reaches 2019 + schema workable via direct DM2 API; (b) EIA regional gas series IDs (Transco Z6 NNY, TETCO M3) exist + post-2024 gap profile tolerable, Henry Hub `RNGWHHD` backstop confirmed; (c) `load_frcstd_hist` carries Western/RTO; (d) one 30-day verified-LMP pull reconciles total_lmp = SMP+MCC+MLC; (e) **R-4 probe** — PJM Cold Weather Advisory/Alert records 2019→present with issuance timestamps (degraded fallback pre-authorized, v5.5 §4/§11). Output: feed-status memo + **repo skeleton + first commit**.
-- **Gated on:** PJM Tools account + Data Miner 2 key (B-Manual) — must land before the spike.
+- **Anchor:** `capstone_V5_5.md` v5.5. **Milestone: M0** (plan approved).
+- **Next B block: Month-0 data-layer de-risking spike** (B-Claude, **6–8h hard cap — not an early M1**). Confirms: (a) `da_tempset` archive reaches 2019 + schema workable via direct DM2 API; (b) EIA regional gas IDs (Transco Z6 NNY, TETCO M3) exist + post-2024 gap profile tolerable, Henry Hub `RNGWHHD` backstop confirmed; (c) `load_frcstd_hist` carries Western/RTO; (d) one 30-day verified-LMP pull reconciles total_lmp = SMP+MCC+MLC; (e) **R-4 probe** — PJM Cold Weather Advisory/Alert records 2019→present with issuance timestamps (degraded fallback pre-authorized, v5.5 §4/§11). Output: feed-status memo + **repo skeleton + first commit**.
+- **Gated on:** PJM Tools account + Data Miner 2 key (B-Manual) — must land before the spike. **Surfaced 2026-06-11 as an ACTION-REQUIRED item (see Setup State); do before next session so the spike can run ∥ L3.**
 - **M1** (data layer + feature catalog v1 — `temperature_deviation_from_normal` primary, `scarcity_stress` secondary, train-only temperature-aggregate weights, R-4 outcome applied) lands in syllabus Month 2; CP-1 activates when M1 starts. The M1 brief inherits the **v5.5 §12 binding list** — do not restate the spec.
 - **Last commit:** None (the spike delivers the first).
 - **Pending clerical (B-Manual):** PJM key — NOW, pre-spike. DagsHub account — Months 0–2 (must precede M2 MLflow logging). HF account + Spaces setup — start of Month 5.
@@ -41,9 +41,9 @@
 
 ## Setup State (one-time actions)
 
-- **Project-knowledge swap — DONE** (verified 2026-06-10: project knowledge now holds `syllabus_v2_3.md` + `capstone_V5_5.md` + current `progress.md`; `change-register-decisions.md` retained as decision record).
-- **NotebookLM source swap — PENDING-UNCONFIRMED:** the notebook may still hold `syllabus_v2_2.md` + `capstone_V5_4.md`. Replace with `syllabus_v2_3.md` + `capstone_V5_5.md` (keep `notebooklm-role.md`) **before pasting L2**. L1 was unaffected (its content didn't change between versions). Confirm when done and this item closes.
-- **Orchestrator-role.md amendment — DONE 2026-06-10:** progress regeneration contract + file delivery + version-note guard added. Yarden swaps the amended file into project instructions.
+- **NotebookLM source swap — DONE 2026-06-11** (Yarden confirmed: notebook now holds `syllabus_v2_3.md` + `capstone_V5_5.md`, `notebooklm-role.md` retained; old v2.2/v5.4 removed). Was gating the L2 paste — now clear.
+- **PJM Tools account + Data Miner 2 key — ACTION-REQUIRED, pre-spike** (B-Manual; precondition for the Month-0 data-layer spike). Register PJM Tools → enable DM2 subscription → generate API key → store for repo env (do **not** commit). ~20–30 min. Do before next session for the L3 ∥ spike plan.
+- (Project-knowledge swap + orchestrator-role.md amendment — DONE 2026-06-10; superseded by Strategic Anchors / now in effect.)
 
 ---
 
@@ -51,7 +51,7 @@
 
 - **Target:** Industry Data Scientist role within ~6.5 months at NIS 35K. Capstone audience: DS hiring manager, not MLE.
 - **Geography:** ≤3 office days/week TLV/Herzliya (ratified 2026-06-10); Beer Sheva base.
-- **Anchor docs (mutually consistent as of 2026-06-10):** `capstone_V5_5.md` v5.5, `syllabus_v2_3.md` v2.3, `orchestrator-role.md` (amended 2026-06-10). Executor role docs: `notebooklm-role.md`, `engineer-role.md` (repo `CLAUDE.md`). Decision record: `change-register-decisions.md` — 23 accepted (2 modified), 6 rejected.
+- **Anchor docs (mutually consistent as of 2026-06-10):** `capstone_V5_5.md` v5.5, `syllabus_v2_3.md` v2.3, `orchestrator-role.md` (amended 2026-06-10). Executor role docs: `notebooklm-role.md`, `engineer-role.md` (repo `CLAUDE.md`). Decision record: `change-register-decisions.md` — 23 accepted (2 modified), 6 rejected. *Note: the orchestrator-role doc still hardcodes v5.4/v2.2 in places — the anchors above win; flagged 2026-06-11.*
 - **Depth labels:** [AUTH], [REC], [APPLIED-AUTH], [APPLIED-REC].
 - **Budget:** $0 expected run rate; $65/month policy ceiling. Deployment $0 (HF Spaces free + DagsHub free + GitHub Actions free, incl. thin CI).
 - **Hardware:** Apple Silicon M3, 16 GB unified memory, CPU only.
@@ -76,27 +76,29 @@
 
 ---
 
-## Session Log
+## Session Log (newest first)
 
-- **2026-05-31 — Baseline.** Project knowledge configured and made internally consistent. Capstone at M0; Track C frozen.
-- **2026-06-09 — Program launch.** Readiness confirmed. Track A Month 0 started; **L1 issued** (Strang L1–5 + Ch. 1–2, [AUTH], Gaussian-elimination solver).
-- **2026-06-10 — Change-register adjudication; v5.5 + v2.3 ratified.** 23 accepted (2 modified), 6 rejected (SC3, SC3-learn, SC5, SC5-learn, LO3, LO2). Alignment pass caught three stale v2.2 artifacts. progress.md regenerated; one correction owned (launch state restored).
-- **2026-06-10 (later) — L1 done; L2 issued.** Yarden reported Lectures 1–5 complete. L2 (four fundamental subspaces, L6–10 + Ch. 3) issued. Month-0 spike surfaced as a parallel option, gated on the PJM key — his call pending.
-- **2026-06-10 (later) — Orchestrator instructions amended; progress.md restored.** The interim progress regeneration had silently dropped Setup State, the C2/C7/C8 Track C floor, future-session notes, and two standing decisions — correction owned. Fix: regeneration contract (mandatory skeleton, prune-only-resolved, omission diff, ceiling-not-target) + file delivery + version-note guard written into `orchestrator-role.md`. This file is the first regeneration under the contract; dropped items restored.
+- **2026-06-11 — Source swap confirmed; L2 started; L3 ∥ spike plan set.** NotebookLM swap done (Blocker closed). L2 in flight. Yarden's plan: finish L2, then L3 ∥ Month-0 spike. PJM Data Miner 2 key surfaced as pre-spike ACTION-REQUIRED. progress regenerated.
+- **2026-06-10 (later) — Orchestrator instructions amended; progress.md restored.** Regeneration contract + file delivery + version-note guard written into `orchestrator-role.md`; dropped items restored, correction owned.
+- **2026-06-10 (later) — L1 done; L2 issued.** Month-0 spike surfaced as a parallel option, gated on the PJM key.
+- **2026-06-10 — Change-register adjudication; v5.5 + v2.3 ratified.** 23 accepted (2 modified), 6 rejected (SC3, SC3-learn, SC5, SC5-learn, LO3, LO2). Three stale v2.2 artifacts caught.
+- **2026-06-09 — Program launch.** Track A Month 0 started; L1 issued.
+- **2026-05-31 — Baseline.** Project knowledge configured; capstone at M0; Track C frozen.
 
 ---
 
 ## Blockers / Open Questions
 
-- **NotebookLM source swap** — done or not? Gates pasting L2 into the notebook (see Setup State).
-- **Spike parallelization** — open the Month-0 data-layer spike alongside L2 this session, or stay L-only? If yes, the PJM Data Miner 2 key (B-Manual) lands first.
+- ~~NotebookLM source swap — done or not?~~ **RESOLVED 2026-06-11** (done).
+- ~~Spike parallelization (∥ L2 this session?)~~ **RESOLVED 2026-06-11** — not ∥ L2; spike runs ∥ L3 next session. Re-gated only on the PJM key landing first (see Setup State).
+- None outstanding.
 
 ---
 
 ## Notes for Future Sessions
 
-- **L3 pickup:** orthogonality/projections/least squares/Gram–Schmidt (OCW L14–17, verify index per C5-min) — lands the OLS normal-equation deliverable. Eigen L21–22 [AUTH]; determinants 18–20 skim [REC]; SVD/PCA + condition number [REC] close Month 0.
-- **Month-0 spike** is the first B-Claude block; schedule alongside Week 1–2 L blocks. PJM key (B-Manual) must precede it. Spike creates the repo (skeleton + first commit).
+- **Next session (post-L2):** issue the **L3 brief** (orthogonality/projections/least squares/Gram–Schmidt, OCW L14–17 — verify index per C5-min — OLS normal-equation deliverable) **and the Month-0 spike B-Claude brief** in parallel. Spike requires the PJM key in hand first. Eigen L21–22 [AUTH]; determinants 18–20 skim [REC]; SVD/PCA + condition number [REC] close Month 0.
+- **Month-0 spike** is the first B-Claude block; PJM key (B-Manual) must precede it. Spike creates the repo (skeleton + first commit).
 - **SQL authoring block** [APPLIED-AUTH]: parallel filler Months 2–3, 20h hard cap; done when LAG/LEAD window-function queries can be written cold.
 - **CNN mini-project** [AUTH], B-Claude: Month 1→2 seam, 16h hard cap, **CIFAR-10 default** (Fashion-MNIST only as de-scope fallback), ship-at-threshold (~70%+), no HP sweep / transfer learning / deployment. Not wired into the PJM capstone.
 - **C4 placements** (v2.3 Supplementary): A/B testing [REC, ~4h] rides Month 1's hypothesis-testing block; classification & metrics [AUTH-light, 10–12h cap] early Month 3; timed take-homes (4h box each) late Month 3 + Month 4; mock interviews ×2–3 late Month 4 → Month 5.
